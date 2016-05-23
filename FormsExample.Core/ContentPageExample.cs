@@ -17,7 +17,9 @@ namespace FormsExample.Core
                 {
                     labelLarge,
                     labelSmall,
-                    button
+                    button,
+                    entry,
+                    entry2
                 },
                 HeightRequest = 1500,
             };
@@ -56,6 +58,21 @@ namespace FormsExample.Core
             FontSize = Device.GetNamedSize( NamedSize.Large, typeof( Button ) ),
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Fill,
+        };
+
+        Entry entry = new Entry
+        {
+            Placeholder = "Username",
+            VerticalOptions = LayoutOptions.Center,
+            Keyboard = Keyboard.Text
+        };
+
+        Entry entry2 = new Entry
+        {
+            Placeholder = "Password",
+            VerticalOptions = LayoutOptions.Center,
+            Keyboard = Keyboard.Text,
+            IsPassword = true
         };
 
         #endregion
