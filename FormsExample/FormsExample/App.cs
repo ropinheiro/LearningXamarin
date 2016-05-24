@@ -5,9 +5,10 @@ namespace FormsExample
 {
     public class App : Application
     {
+        // Page 22-25
         public App()
         {
-            // The root page of your application
+            // Page 26
             MainPage = new ContentPageExample();
 
             //MainPage = new ContentPage
@@ -25,16 +26,19 @@ namespace FormsExample
             //};
         }
 
+        // Page 23
         protected override void OnStart()
         {
             // Handle when your app starts
         }
 
+        // Page 23
         protected override void OnSleep()
         {
             // Handle when your app sleeps
         }
 
+        // Page 23
         protected override void OnResume()
         {
             // Handle when your app resumes
