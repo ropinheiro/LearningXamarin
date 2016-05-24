@@ -19,7 +19,9 @@ namespace FormsExample.Core
                     labelSmall,
                     button,
                     entry,
-                    entry2
+                    entry2,
+                    boxView,
+                    image
                 },
                 HeightRequest = 1500,
             };
@@ -27,7 +29,7 @@ namespace FormsExample.Core
             this.BackgroundColor = Color.Black;
         }
 
-        #region Page Controls
+        #region Page Views
 
         Label labelLarge = new Label
         {
@@ -73,6 +75,23 @@ namespace FormsExample.Core
             VerticalOptions = LayoutOptions.Center,
             Keyboard = Keyboard.Text,
             IsPassword = true
+        };
+
+        BoxView boxView = new BoxView
+        {
+            Color = Color.Silver,
+            WidthRequest = 150,
+            HeightRequest = 150,
+            HorizontalOptions = LayoutOptions.StartAndExpand,
+            VerticalOptions = LayoutOptions.Fill
+        };
+
+        Image image = new Image
+        {
+            Source = "http://www.together.pt/images/logotipo.jpg",
+            Aspect = Aspect.AspectFit,
+            HorizontalOptions = LayoutOptions.End,
+            VerticalOptions = LayoutOptions.Fill
         };
 
         #endregion
