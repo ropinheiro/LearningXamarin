@@ -9,7 +9,10 @@ namespace FormsExample
         public App()
         {
             // Page 26
-            MainPage = new ContentPageExample();
+            // MainPage = new ContentPageExample();
+
+            // Page 49
+            MainPage = new StackLayoutVertical();
 
             //MainPage = new ContentPage
             //{

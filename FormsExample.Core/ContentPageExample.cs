@@ -24,6 +24,9 @@ namespace FormsExample.Core
                     image2
                 },
                 HeightRequest = 1500,
+                // Page 47
+                // Spacing = 0, // padding between children.
+                // VerticalOptions = LayoutOptions.FillAndExpand
             };
             // Replaced by code in Page 40
             // Content = stackLayout;
@@ -37,7 +40,7 @@ namespace FormsExample.Core
                 // Orientation = ScrollOrientation.Horizontal,
                 Content = stackLayout
             };
-            // Page #40
+            // Page 40
             Content = scrollView;
 
             // Page 29
