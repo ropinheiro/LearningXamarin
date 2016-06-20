@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="ContentPageExample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelativeLayoutExample.cs" />
     <Compile Include="StackLayoutVertical.cs" />
   </ItemGroup>
   <ItemGroup>
