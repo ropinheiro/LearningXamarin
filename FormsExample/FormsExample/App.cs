@@ -14,8 +14,13 @@ namespace FormsExample
             // Page 49
             // MainPage = new StackLayoutVertical();
 
-            MainPage = new RelativeLayoutExample();
-        
+            // Page 64
+            // MainPage = new AbsoluteLayoutExample();
+
+            // Page 71
+            MainPage = new GridExample();
+
+            // Default generated code
             //MainPage = new ContentPage
             //{
             //    Content = new StackLayout
