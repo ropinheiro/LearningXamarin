@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace FormsExample.Core
 {
-    // Pages 106 to ...
+    // Pages 106 to 118
     public class Chapter4Controls : ContentPage
     {
         // Page 106
@@ -67,6 +67,63 @@ namespace FormsExample.Core
                 }
             };
 
+            // Page 113
+            Stepper stepper = new Stepper
+            {
+                Minimum = 0,
+                Maximum = 10,
+                Increment = 1,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.CenterAndExpand
+            };
+
+            // Alternative
+            // Stepper stepper = new Stepper( 0, 10, 0, 1 );
+
+            // Page 114
+            stepper.ValueChanged += ( sender, e ) =>
+            {
+                eventValue.Text = string.Format( "Stepper value is {0:F1}", e.NewValue );
+                pageValue.Text = stepper.Value.ToString();
+            };
+
+            // Page 114
+            Slider slider = new Slider
+            {
+                Minimum = 0,
+                Maximum = 100,
+                Value = 50,
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+                WidthRequest = 300
+            };
+
+            // Alternative
+            // Slider slider = new Slider( 0, 100, 50 );
+
+            // Page 115
+            slider.ValueChanged += ( sender, e ) =>
+            {
+                eventValue.Text = string.Format( "Slider value is {0:F1}", e.NewValue );
+                pageValue.Text = slider.Value.ToString();
+            };
+
+            // Page 115
+            Switch switcher = new Switch
+            {
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.CenterAndExpand
+            };
+
+            switcher.Toggled += ( sender, e ) =>
+            {
+                eventValue.Text = string.Format( "Switch is now {0}", e.Value );
+                pageValue.Text = switcher.IsToggled.ToString();
+            };
+
+            // Page 118
+            this.Padding = new Thickness( 10,
+                Device.OnPlatform( 20, 0, 0 ), 10, 15 );
+
             this.Content = new StackLayout()
             {
                 HorizontalOptions = LayoutOptions.Center,
@@ -76,7 +133,10 @@ namespace FormsExample.Core
                     pageValue,
                     picker,
                     datePicker,
-                    timePicker
+                    timePicker,
+                    stepper,
+                    slider,
+                    switcher
                 }
             };
         }
