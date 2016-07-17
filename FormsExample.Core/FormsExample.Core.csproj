@@ -35,6 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ListItemCell.cs" />
+    <Compile Include="ListViewCustom.cs" />
     <Compile Include="ListViewDataModel.cs" />
     <Compile Include="ListViewStrings.cs" />
     <Compile Include="Chapter4Controls.cs" />

@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace FormsExample.Core
 {
-    // Pages 157 to 160
+    // Pages 157 to 162
     public class ListViewDataModel : ContentPage
     {
         public ListViewDataModel()
