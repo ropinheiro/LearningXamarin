@@ -17,12 +17,31 @@ namespace FormsExample.Core
                     new ListItem { Title="Third", Description="3rd item" }
                 };
 
+            // Page 160
+            ListView listView2 = new ListView();
+            listView2.ItemsSource = new ListItem[]
+            {
+                    new ListItem { Source="first.png", Title="First", Description="1st item" },
+                    new ListItem { Source="second.png", Title="Second", Description="2nd item" },
+                    new ListItem { Source="third.png", Title="Third", Description="3rd item" }
+            };
+
             // Page 158
             listView.ItemTemplate = new DataTemplate( typeof( TextCell ) );
             listView.ItemTemplate.SetBinding( TextCell.TextProperty, "Title" );
             listView.ItemTemplate.SetBinding( TextCell.DetailProperty, "Description" );
             listView.ItemTemplate.SetValue( TextCell.TextProperty, Color.Red );
             listView.ItemTemplate.SetValue( TextCell.DetailColorProperty, Color.Blue );
+
+            // Page 161
+            listView2.ItemTemplate = new DataTemplate( typeof( ImageCell ) );
+            listView2.ItemTemplate.SetBinding( ImageCell.ImageSourceProperty, "Source" );
+            // Note: in the 2 lines below, book says to use ImageCell, but VS
+            //       suggests simplification to TextCell (and I followed it).
+            listView2.ItemTemplate.SetBinding( TextCell.TextProperty, "Title" );
+            listView2.ItemTemplate.SetBinding( TextCell.DetailProperty, "Description" );
+            listView2.ItemTemplate.SetValue( TextCell.TextProperty, Color.Red );
+            listView2.ItemTemplate.SetValue( TextCell.DetailColorProperty, Color.Blue );
 
             // Page 159
             listView.ItemTapped += async ( sender, e ) =>
@@ -50,5 +69,8 @@ namespace FormsExample.Core
     {
         public string Title { get; set; }
         public string Description { get; set; }
+
+        // Page 160
+        public string Source { get; set; }
     }
 }
